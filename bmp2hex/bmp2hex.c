@@ -18,7 +18,7 @@ typedef uint8_t byte;
 typedef uint16_t word;
 typedef uint32_t dword;
 
-typedef struct tagBITMAP /* the structure for a bitmap header (just the essentials)*/
+typedef struct hdrBITMAP /* the structure for a bitmap header (just the essentials)*/
 {
     dword fileSize;
     dword rsrv;
