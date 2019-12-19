@@ -91,3 +91,5 @@ proklarush@teonas:~# ./bmp2hex -c bf.bmp
 ```
 ****
 ![Right Foot of Bigfoot](img/bfoot_screen.jpg)
+
+Left foot is next :)
