@@ -5,7 +5,7 @@ and to convert it 8 rows, by 8 rows into the "GPRINT" 8bit Hex sequence
 for Sharp PC-1600, PC-E500, PC-G850* 
 also for "DEFCHR$" used by Casio PB-1000 , AI-1000 and PB-2000C
 
-For __**Sharp PC-1600**__, the corresponding IOCS Function would be **PRTGPTN @ 0x0154** or **LOADLCD @ 0160**
+For __**Sharp PC-1600**__, the corresponding IOCS Function would be **PRTGPTN @ 0x0154** or **LOADLCD @ 0x0160**
 
 For __**Sharp PC-E500**__, the corresponding function is when you write on **STDO:SCRN:**, Command **Display 8-bit pattern @ 0x4a**
 
