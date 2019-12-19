@@ -89,3 +89,5 @@ proklarush@teonas:~# ./bmp2hex -c bf.bmp
 80E0F0F0F0F0F0E0E0C0C08080808080C0E0F0F8FCFCFCF8F00008DCDEDEDE1E
 
 ```
+****
+![Right Foot of Bigfoot](img/bfoot_screen.jpg)
