@@ -41,7 +41,7 @@ Usage: bmp2hex [OPTION...] BMPFile
 **Example:**
 
 ```
-O:\bitmap2hex>b2h.exe -c -H -t -g -i -d f.bmp
+O:\bitmap2hex>bmp2hex.exe -c -H -t -g -i -d f.bmp
 +---------------------------------------------------------------+
 | BMP File Header
 +---------------------------------------------------------------+
