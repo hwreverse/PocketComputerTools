@@ -1,11 +1,11 @@
 /**************************************************************************
  * bmp.c                                                                  *
- * cooked together by HWR0                                                        *
+ * cooked together by HWR0                                                *
  * ===============                                                        *
  * evilhardware@mail.ru                                                   *
  **************************************************************************/
 
-//will work only on little-Endian
+// will work only on little-Endian
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -219,7 +219,7 @@ void showBMPHeader(BMPHeader *b)
     printf("| Y Pixels/meter: %d\n", b->yPixelsPerMeter);
     printf("+---------------------------------------------------------------+\n");
     printf("| 8-Bit Rows: %d\n", ((b->height) / 8));
-    printf("+---------------------------------------------------------------+\n");
+    printf("+---------------------------------------------------------------+\n\n");
 }
 
 /**************************************************************************
@@ -346,8 +346,8 @@ int main(int argc, char *argv[])
             }
             printf("\n");
         }
+        printf("\n");
     }
-
     //Show Graphics
     if (showGraphics)
     {
@@ -366,10 +366,12 @@ int main(int argc, char *argv[])
             }
             printf("\n");
         }
+
+        printf("\n");
     }
 
     //now the hexconvert
-    printf("\n\n");
+    printf("\n");
     for (int rr = 0; rr < rows; rr++)
     {
         if (db)
@@ -393,6 +395,9 @@ int main(int argc, char *argv[])
         printf("\n");
     }
     printf("\n\n");
+
+    return 0;
+    printf("\n");
 
     return 0;
 }
