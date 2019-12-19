@@ -8,7 +8,8 @@ also for "DEFCHR$" used by Casio PB-1000 , AI-1000 and PB-2000C
 Program will work on little-Endian Architectures.
 Compilation tested on gcc (latest 8.*) under Linux and under MINGW64 under Windows
 
-<pre><code>
+<pre>
+<code>
 Usage: bmp2hex [OPTION...] BMPFile
 
     -c,     Clean output, without banner
@@ -21,13 +22,14 @@ Usage: bmp2hex [OPTION...] BMPFile
     -d,     Show hex values as "db 0x34, ..." assembler line
     -h,     Display this help message
 
-</code></pre>
-<hl>
+</code>
+</pre>
 
+---
 
 **Example:**
 
-<pre><code>
+```
 O:\bitmap2hex>b2h.exe -c -H -t -g -i -d f.bmp
 +---------------------------------------------------------------+
 | BMP File Header
@@ -65,12 +67,14 @@ O:\bitmap2hex>b2h.exe -c -H -t -g -i -d f.bmp
 
 db 0xFE,0x90,0x90,0xB8,0x80,0x00
 
-</code><hl><code>
+```
 
+****
+
+```bash
 proklarush@teonas:~# ./bmp2hex -c bf.bmp
 
 03070F0F0F1F1F1F1F1F3F3F7F7FFFFFFFFFFFFF7F7F3F0F83A02C6D0D0D0100
 80E0F0F0F0F0F0E0E0C0C08080808080C0E0F0F8FCFCFCF8F00008DCDEDEDE1E
 
-
-</code></pre>
+```
