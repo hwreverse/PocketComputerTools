@@ -27,9 +27,9 @@ typedef struct tagBITMAP /* the structure for a bitmap header (just the essentia
     dword width;
     dword height;
     word planes;
-    word bitDepth; //I'l kick you if it is different from 24
+    word bitDepth;     //I'l kick you if it is different from 24
     dword compression; // just fucking ignored
-    dword imageSize; //the RAM's the limit
+    dword imageSize;   //the RAM's the limit
     dword xPixelsPerMeter;
     dword yPixelsPerMeter;
 } BMPHeader;
@@ -178,6 +178,7 @@ void printHelp()
     printf("Usage: bmp2hex [OPTION...] BMPFile\n\n");
 
     printf("    -c,     Clean output, without banner\n");
+    printf("    -H,     Shows essential data from BMP header\n");
     printf("    -t,     Show table      (0 1 )\n");
     printf("    -g,     Show graphics   (  %c%c)\n", 219, 219);
     printf("    -i,     Invert graphics (%c%c  )\n", 219, 219);
