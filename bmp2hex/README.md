@@ -5,8 +5,19 @@ and to convert it 8 rows, by 8 rows into the "GPRINT" 8bit Hex sequence
 for Sharp PC-1600, PC-E500, PC-G850* 
 also for "DEFCHR$" used by Casio PB-1000 , AI-1000 and PB-2000C
 
+For __**Sharp PC-1600**__, the corresponding IOCS Function would be **PRTGPTN @ 0x0154** or **LOADLCD @ 0160H**
+
+For __**Sharp PC-E500**__, the corresponding function is when you write on **STDO:SCRN:**, Command **Display 8-bit pattern @ 0x4a**
+
+For __**Sharp PC-G850 / G850V / G850VS**__, the corresponding IOCS Function would be **Print 8-Bit Pattern @ 0xbfd0**
+
+*(Data taken from the respective Tech or Usermanuals)*
+
+
 Program will work on little-Endian Architectures.
 Compilation tested on gcc (latest 8.*) under Linux and under MINGW64 under Windows
+
+---
 
 <pre>
 <code>
