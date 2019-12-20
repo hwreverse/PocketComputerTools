@@ -6,6 +6,7 @@
  **************************************************************************/
 
 // will work only on little-Endian
+// for now, won't check the lenght of a file or any other parameters
 
 #include <stdio.h>
 #include <stdlib.h>
