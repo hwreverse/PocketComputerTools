@@ -1,5 +1,3 @@
-CC=gcc
-CFLAGS=-I.
+gsconv850: gsconv850.c
+     gcc -o gsconv850 gsconv850.c .
 
-gsconv850: gsconv850.o 
-     $(CC) -o gsconv850	gsconv850.o -I 
