@@ -354,11 +354,11 @@ int hexValue(int c /*column*/, int r /*row*/, int sbi /*subimage*/)
     rp = r * 8;
     if (sbi)
     {
-        temp = (bmp[c][rp] == 2) * 128 + (bmp[c][rp + 1] == 2) * 64 + (bmp[c][rp + 2] == 2) * 32 + (bmp[c][rp + 3] == 2) * 16 + (bmp[c][rp + 4] == 2) * 8 + (bmp[c][rp + 5] == 2) * 4 + (bmp[c][rp + 6] == 2) * 2 + (bmp[c][rp + 7] == 2);
+        temp = (bmp[c][rp + 7] == 2) * 128 + (bmp[c][rp + 6] == 2) * 64 + (bmp[c][rp + 5] == 2) * 32 + (bmp[c][rp + 4] == 2) * 16 + (bmp[c][rp + 3] == 2) * 8 + (bmp[c][rp + 2] == 2) * 4 + (bmp[c][rp + 1] == 2) * 2 + (bmp[c][rp + 0] == 2);
     }
     else
     {
-        temp = ((bmp[c][rp] == 1) || (bmp[c][rp] == 2)) * 128 + ((bmp[c][rp + 1] == 1) || (bmp[c][rp + 1] == 2)) * 64 + ((bmp[c][rp + 2] == 1) || (bmp[c][rp + 2] == 2)) * 32 + ((bmp[c][rp + 3] == 1) || (bmp[c][rp + 3] == 2)) * 16 + ((bmp[c][rp + 4] == 1) || (bmp[c][rp + 4] == 2)) * 8 + ((bmp[c][rp + 5] == 1) || (bmp[c][rp + 5] == 2)) * 4 + ((bmp[c][rp + 6] == 1) || (bmp[c][rp + 6] == 2)) * 2 + ((bmp[c][rp + 7] == 1) || (bmp[c][rp + 7] == 2));
+        temp = ((bmp[c][rp + 7] == 1) || (bmp[c][rp + 7] == 2)) * 128 + ((bmp[c][rp + 6] == 1) || (bmp[c][rp + 6] == 2)) * 64 + ((bmp[c][rp + 5] == 1) || (bmp[c][rp + 5] == 2)) * 32 + ((bmp[c][rp + 4] == 1) || (bmp[c][rp + 4] == 2)) * 16 + ((bmp[c][rp + 3] == 1) || (bmp[c][rp + 3] == 2)) * 8 + ((bmp[c][rp + 2] == 1) || (bmp[c][rp + 2] == 2)) * 4 + ((bmp[c][rp + 1] == 1) || (bmp[c][rp + 1] == 2)) * 2 + ((bmp[c][rp + 0] == 1) || (bmp[c][rp + 0] == 2));
     }
     return temp;
 }
@@ -408,7 +408,7 @@ void generateASMCode(int g850 /*G850 Text editor Syntax*/, int spc /*Insert Spac
 
     line += 10;
     l(lnumbers, line);
-    printf("GPF: EQU ");
+    printf("GPF EQU ");
     if (xsyntax)
     {
         printf("0xbfd0\n");
@@ -817,5 +817,6 @@ int main(int argc, char *argv[])
 
     generateASMCode(spec850, space, 0);
 
+    printf("%c", 0x1a);
     return 0;
 }
