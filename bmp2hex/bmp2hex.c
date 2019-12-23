@@ -98,7 +98,7 @@ void load_bmp(char *file, BMPHeader *b, int order)
         printf("%s is not in 24bits per pixel format! Are you asking for a Seg Fault ?!\n\n", file);
         exit(1);
     }
-    /* check to see if it is a valid bitmap file for conversion to 8Bit GPRINT (height multiple of 8)*/
+    /* check to see if it needs to be truncated (height multiple of 8)*/
     if (!((b->height) % 8 == 0))
     {
 
@@ -384,7 +384,7 @@ int main(int argc, char *argv[])
                 printf("0x");
 
             rp = rr * 8; // real position for y
-            hv = bmp[cc][rp] * 128 + bmp[cc][rp + 1] * 64 + bmp[cc][rp + 2] * 32 + bmp[cc][rp + 3] * 16 + bmp[cc][rp + 4] * 8 + bmp[cc][rp + 5] * 4 + bmp[cc][rp + 6] * 2 + bmp[cc][rp + 7];
+            hv = bmp[cc][rp + 7] * 128 + bmp[cc][rp + 6] * 64 + bmp[cc][rp + 5] * 32 + bmp[cc][rp + 4] * 16 + bmp[cc][rp + 3] * 8 + bmp[cc][rp + 2] * 4 + bmp[cc][rp + 1] * 2 + bmp[cc][rp + 0];
             printf("%02X", hv);
 
             if (db && (cc != (cols - 1)))

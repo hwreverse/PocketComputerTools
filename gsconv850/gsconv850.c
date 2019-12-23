@@ -184,7 +184,7 @@ void load_bmp(char *file, BMPHeader *b, int order, int avg, int lo, int hi, int 
                 }
                 if (tempv < lo)
                 {
-                    bmp[x][y] = 0;
+                    bmp[x][y] = 2;
                 }
                 else if (tempv < hi)
                 {
@@ -192,7 +192,7 @@ void load_bmp(char *file, BMPHeader *b, int order, int avg, int lo, int hi, int 
                 }
                 else
                 {
-                    bmp[x][y] = 2;
+                    bmp[x][y] = 0;
                 }
             }
             /* mind the padding */
