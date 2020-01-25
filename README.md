@@ -11,3 +11,7 @@ Tools for our beloved Sharp and Casio (others too) Pocket Computers from the 80'
 My Vintage collection 15 months ago :
 
 ![Vintage Calculator Collection](img/lab.jpg)
+
+Now (20.1.2020):<br>
+
+![Vintage Calculator Collection](img/collection.jpg)
