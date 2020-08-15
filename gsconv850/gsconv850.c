@@ -99,10 +99,10 @@ void load_bmp(char *file, BMPHeader *b, int order, int avg, int lo, int hi, int 
         exit(1);
     }
     /* check to see if we have too big a bitmap as argument*/
-    if ((b->height) / 8 > 6)
+    if ((b->height) / 8 > 8)
     {
 
-        printf("%s will take more than 6 rows of 8-bit to encode. Gojira no welcome here !\n\n", file);
+        printf("%s will take more than 8 rows of 8-bit to encode. Gojira no welcome here !\n\n", file);
         exit(1);
     }
 
