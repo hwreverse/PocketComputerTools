@@ -227,8 +227,8 @@ void printHelp()
     printf("    -c,     Clean output, without banner\n");
     printf("    -H,     Shows essential data from BMP header\n");
     printf("    -t,     Show table      (0 1 2 ) - DEBUG\n");
-    printf("    -g,     Show graphics   (  %c%c%c%c) - DEBUG\n", 177, 177, 219, 219);
-    printf("    -i,     Invert graphics (%c%c%c%c  ) - DEBUG\n", 219, 219, 177, 177);
+    printf("    -g,     Show graphics   (%c[30;40m  %c[90;100m  %c[37;47m  %c[0m) - DEBUG\n", 27, 27, 27, 27);
+    printf("    -i,     Invert graphics (%c[37;47m  %c[90;100m  %c[30;40m  %c[0m) - DEBUG\n", 27,27,27,27);
     printf("    -r,     Reverse Y order\n");
     printf("    -a,     Average RGB Pixel to gray, otherwise just the red channel taken\n");
     printf("    -s,     Remove space between hex values\n");
@@ -294,8 +294,9 @@ void showBMPTable()
 void showBMPGraphics(int invColors /*colors inverted?*/)
 {
     int tmpv = 0;
-    int gray = 177;
-    int white = 219; //white = if white is foreground in terminal !
+    int esc = 27;
+    //int gray = 177;
+    //int white = 219; //white = if white is foreground in terminal !
 
     for (int y = 0; y < (fbmp.height); y++)
     {
@@ -305,20 +306,20 @@ void showBMPGraphics(int invColors /*colors inverted?*/)
             if (invColors)
                 tmpv = 2 - tmpv;
 
-            if (tmpv == 0)
+            if (tmpv == 0) //black
             {
-                printf("  ");
+                printf("%c[37;47m  ", esc);
             }
-            else if (tmpv == 1)
+            else if (tmpv == 1) //gray
             {
-                printf("%c%c", gray, gray);
+                printf("%c[90;100m  ", esc);
             }
-            else
+            else //white
             {
-                printf("%c%c", white, white);
+                printf("%c[37;47m  ", esc);
             }
         }
-        printf("\n");
+        printf("%c[0m\n",esc);
     }
 }
 
